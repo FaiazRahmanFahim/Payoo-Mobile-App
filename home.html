@@ -61,25 +61,28 @@
           <h2>Add Money</h2>
         </div>
         <div
-        id="btn-sectionCashOut"
+          id="btn-sectionCashOut"
           class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-xl"
         >
           <img src="/Resources/assets/send1.png" alt="" />
           <h2>Cashout</h2>
         </div>
         <div
+          id="btn-sectionTransferMoney"
           class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-2 rounded-xl"
         >
           <img src="/Resources/assets/money1.png" alt="" />
           <h2>Transfer Money</h2>
         </div>
         <div
+          id="btn-sectionGetBonus"
           class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-xl"
         >
           <img src="/Resources/assets/bonus1.png" alt="" />
           <h2>Get Bonus</h2>
         </div>
         <div
+          id="btn-sectionPayBill"
           class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-xl"
         >
           <img src="/Resources/assets/purse1.png" alt="" />
@@ -96,7 +99,7 @@
 
     <!---------- All Form Section --------->
     <!-- Add Money Section -->
-    <section id="section-addMoney" class="mt-16 mb-10">
+    <section id="section-addMoney" class="mt-10 mb-10 hidden">
       <h2 class="text-lg font-semibold mb-4">Add Money</h2>
       <form
         id="form-addMoney"
@@ -154,7 +157,7 @@
     </section>
 
     <!-- Cash Out Section -->
-    <section id="section-cashOut" class="mt-16 mb-10 hidden">
+    <section id="section-cashOut" class="mt-10 mb-10 hidden">
       <h2 class="text-lg font-semibold mb-4">Cash Out</h2>
       <form
         id="form-cashOut"
@@ -193,6 +196,134 @@
           class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
         >
           Withdraw Money
+        </button>
+      </form>
+    </section>
+
+    <!-- Transfer Money Section -->
+    <section id="section-transferMoney" class="mt-10 mb-10 hidden">
+      <h2 class="text-lg font-semibold mb-4">Transfer Money</h2>
+      <form
+        id="form-transferMoney"
+        class="bg-white w-[402px] p-6 rounded-2xl"
+        action=""
+      >
+        <div class="mt-4">
+          <label for="">User Account Number</label><br />
+          <input
+            type="text"
+            id="input-userAccNum"
+            placeholder="Enter 11 digit number"
+            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          />
+        </div>
+        <div class="mt-4">
+          <label for="">Amount</label><br />
+          <input
+            type="text"
+            id="input-transferAmount"
+            placeholder="Add Amount to withdraw"
+            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          />
+        </div>
+        <div class="mt-4">
+          <label for="">4 Digit Pin</label><br />
+          <input
+            type="text"
+            id="input-pinNum-UAN"
+            placeholder="Enter 4 digit pin Number"
+            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          />
+        </div>
+        <button
+          id="btn-sendMoney"
+          class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
+        >
+          Send Money
+        </button>
+      </form>
+    </section>
+
+    <!-- Get Bonus Section -->
+    <section id="section-getBonus" class="mt-10 mb-10 hidden">
+      <h2 class="text-lg font-semibold mb-4">Get Bonus</h2>
+      <form
+        id="form-getBonus"
+        class="bg-white w-[402px] p-6 rounded-2xl"
+        action=""
+      >
+        <div class="mt-4">
+          <label for="">Enter Bonus coupon</label><br />
+          <input
+            type="text"
+            id="input-coupon"
+            placeholder="Enter your coupon"
+            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          />
+        </div>
+        <button
+          id="btn-getBonus"
+          class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
+        >
+          Get Bonus
+        </button>
+      </form>
+    </section>
+
+    <!-- Pay Bill Section -->
+    <section id="section-payBill" class="mt-10 mb-10 hidden">
+      <h2 class="text-lg font-semibold mb-4">Pay Bill</h2>
+      <form
+        id="form-payBill"
+        class="bg-white w-[402px] p-6 rounded-2xl"
+        action=""
+      >
+        <div>
+          <label for="">Select To Pay</label><br />
+          <select
+            id="select-toPay"
+            class="select bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          >
+            <option>Select to Pay</option>
+            <option>Electricity</option>
+            <option>Water</option>
+            <option>Telephone</option>
+            <option>Govt. Fees</option>
+            <option>Wifi</option>
+          </select>
+        </div>
+        <div class="mt-4">
+          <label for="">Biller Account Number</label><br />
+          <input
+            type="text"
+            id="input-billerAccNum"
+            placeholder="Enter Account number"
+            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          />
+        </div>
+        <div class="mt-4">
+          <label for="">Amount to Pay</label><br />
+          <input
+            type="text"
+            id="input-AmountToPay"
+            placeholder="Add Amount to pay"
+            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          />
+        </div>
+        <div class="mt-4">
+          <label for="">Pin Number</label><br />
+          <input
+            type="text"
+            id="input-pinNum-PB"
+            placeholder="Enter 4 digit pin Number"
+            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          />
+        </div>
+        <button
+          id="btn-payNow"
+          class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
+        >
+          Pay Now
         </button>
       </form>
     </section>
