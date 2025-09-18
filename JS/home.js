@@ -327,7 +327,7 @@ document
       const div = document.createElement("div");
       div.innerHTML = `
            <div
-          class="bg-white w-96 p-4 rounded-2xl flex justify-between items-center shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200"
+          class="bg-white w-[370px] p-4 rounded-2xl flex justify-between items-center shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
         >
           <div class="flex gap-3">
             <div class="p-3 rounded-full bg-gradient-to-br from-blue-100 to-blue-200">
