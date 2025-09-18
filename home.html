@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title & Logo -->
     <title>HomePage</title>
+    <link
+      rel="shortcut icon"
+      href="./Resources/payoo.png"
+      type="image/x-icon"
+    />
 
     <!-- tainwindCSS and daysiUI CDN -->
     <link
@@ -12,11 +18,31 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Font &Font Awesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Styles/style.css" />
   </head>
 
-  <body class="bg-[#F4F5F7] h-[100%] flex flex-col items-center">
+  <body
+    class="bg-gradient-to-br from-[#F4F5F7] to-[#E8EBF0] min-h-screen flex flex-col items-center px-4 py-2"
+  >
     <!-- Nav Bar -->
-    <header class="bg-white w-[450px] p-8 border-b-2 border-gray-300">
+    <header
+      class="bg-white w-full max-w-sm mx-auto p-6 border-b-2 border-gray-200 shadow-lg rounded-t-3xl mt-2"
+    >
       <div class="w-full flex justify-between">
         <div class="flex justify-center items-center">
           <img
@@ -24,15 +50,17 @@
             src="Resources/assets/Group.png"
             alt=""
           />
-          <div class="ml-2">
-            <h3 class="font-extrabold">$<span id="totalAmount">45000</span></h3>
-            <p class="text-[#828282]">Available Balance</p>
+          <div class="ml-3">
+            <h3 class="font-extrabold text-xl text-gray-800">
+              $<span id="totalAmount">45000</span>
+            </h3>
+            <p class="text-[#828282] text-sm">Available Balance</p>
           </div>
         </div>
         <div class="flex justify-center items-center">
           <button
             id="btn-logOut"
-            class="btn bg-white text-[#828282] rounded-lg p-5"
+            class="btn bg-gradient-to-r from-red-50 to-red-100 hover:from-red-100 hover:to-red-200 text-[#828282] hover:text-red-600 rounded-xl px-4 py-2 transition-all duration-300 shadow-md hover:shadow-lg"
           >
             <img
               class="rotate-180 text-[#696a6b]"
@@ -46,52 +74,61 @@
     </header>
 
     <!-- Menu Section -->
-    <section class="bg-white w-[450px] p-8 rounded-b-2xl">
-      <h2 class="font-bold text-2xl">🔥 Welcome to Payooo!</h2>
-      <p class="text-[#828282] text-base">
-        Enjoy easy and convenient financial services with us. Cashout charge is
-        low and
+    <section
+      class="bg-white w-full max-w-sm mx-auto p-4 rounded-b-3xl shadow-lg"
+    >
+      <h2 class="text-xl font-bold">
+        🔥
+        <span
+          class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          >Welcome to Payooo!</span
+        >
+      </h2>
+      <p class="text-[#828282] text-base leading-relaxed mt-2">
+        Enjoy easy and convenient financial services with us. Cash Out charge is
+        low and secure.
       </p>
-      <div class="mt-6 grid grid-cols-3 gap-4">
+      <div class="mt-6 grid grid-cols-3 gap-3">
         <div
           id="btn-sectionAddMoney"
-          class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-xl"
+          class="activeBtn text-xs border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-2xl cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105"
         >
-          <img src="/Resources/assets/wallet1.png" alt="" />
+          <img src="./Resources/assets/wallet1.png" alt="" />
           <h2>Add Money</h2>
         </div>
         <div
           id="btn-sectionCashOut"
-          class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-xl"
+          class="activeBtn text-xs border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-2xl cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105"
         >
-          <img src="/Resources/assets/send1.png" alt="" />
-          <h2>Cashout</h2>
+          <img src="./Resources/assets/send1.png" alt="" />
+          <h2>Cash Out</h2>
         </div>
         <div
           id="btn-sectionTransferMoney"
-          class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-2 rounded-xl"
+          class="activeBtn text-xs border-2 border-gray-300 flex flex-col justify-center items-center p-2 rounded-2xl cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105"
         >
-          <img src="/Resources/assets/money1.png" alt="" />
+          <img src="./Resources/assets/money1.png" alt="" />
           <h2>Transfer Money</h2>
         </div>
         <div
           id="btn-sectionGetBonus"
-          class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-xl"
+          class="activeBtn text-xs border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-2xl cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105"
         >
-          <img src="/Resources/assets/bonus1.png" alt="" />
+          <img src="./Resources/assets/bonus1.png" alt="" />
           <h2>Get Bonus</h2>
         </div>
         <div
           id="btn-sectionPayBill"
-          class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-xl"
+          class="activeBtn text-xs border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-2xl cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105"
         >
-          <img src="/Resources/assets/purse1.png" alt="" />
+          <img src="./Resources/assets/purse1.png" alt="" />
           <h2>Pay Bill</h2>
         </div>
         <div
-          class="text-sm border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-xl"
+          id="btn-sectionTransactions"
+          class="activeBtn text-xs border-2 border-gray-300 flex flex-col justify-center items-center p-3 rounded-2xl cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105"
         >
-          <img src="/Resources/assets/transaction1.png" alt="" />
+          <img src="./Resources/assets/transaction1.png" alt="" />
           <h2>Transactions</h2>
         </div>
       </div>
@@ -99,18 +136,18 @@
 
     <!---------- All Form Section --------->
     <!-- Add Money Section -->
-    <section id="section-addMoney" class="mt-10 mb-10 hidden">
-      <h2 class="text-lg font-semibold mb-4">Add Money</h2>
+    <section id="section-addMoney" class="form mt-8 mb-10 hidden px-4">
+      <h2 class="text-xl font-semibold mb-4 ml-4 text-gray-800">Add Money</h2>
       <form
         id="form-addMoney"
-        class="bg-white w-[402px] p-6 rounded-2xl"
+        class="bg-white w-96 max-w-sm mx-auto p-6 rounded-3xl shadow-xl border border-gray-100"
         action=""
       >
         <div>
           <label for="">Select A Bank</label><br />
           <select
             id="select-bank"
-            class="select bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="select bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           >
             <option>Select Bank</option>
             <option>AB Bank</option>
@@ -126,7 +163,7 @@
             type="text"
             id="input-bankAccNum"
             placeholder="Enter 11 digit account number"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <div class="mt-4">
@@ -135,7 +172,7 @@
             type="text"
             id="input-addAmount"
             placeholder="Add Amount to withdraw"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <div class="mt-4">
@@ -144,12 +181,12 @@
             type="text"
             id="input-pinNum-AM"
             placeholder="Enter 4 digit pin Number"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <button
           id="btn-addMoney"
-          class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
+          class="btn bg-gradient-to-r from-[#0874F2] to-[#1e40af] hover:from-[#1e40af] hover:to-[#0874F2] text-white w-full h-12 mt-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
         >
           Add Money
         </button>
@@ -157,11 +194,11 @@
     </section>
 
     <!-- Cash Out Section -->
-    <section id="section-cashOut" class="mt-10 mb-10 hidden">
-      <h2 class="text-lg font-semibold mb-4">Cash Out</h2>
+    <section id="section-cashOut" class="form mt-8 mb-10 hidden px-4">
+      <h2 class="text-xl font-semibold mb-4 ml-4 text-gray-800">Cash Out</h2>
       <form
         id="form-cashOut"
-        class="bg-white w-[402px] p-6 rounded-2xl"
+        class="bg-white w-96 max-w-sm mx-auto p-6 rounded-3xl shadow-xl border border-gray-100"
         action=""
       >
         <div class="mt-4">
@@ -170,7 +207,7 @@
             type="text"
             id="input-agentNum"
             placeholder="Enter 11 digit number"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <div class="mt-4">
@@ -179,7 +216,7 @@
             type="text"
             id="input-Amount"
             placeholder="Add Amount to withdraw"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <div class="mt-4">
@@ -188,12 +225,12 @@
             type="text"
             id="input-pinNum-CO"
             placeholder="Enter 4 digit pin Number"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <button
           id="btn-withdrawMoney"
-          class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
+          class="btn bg-gradient-to-r from-[#0874F2] to-[#1e40af] hover:from-[#1e40af] hover:to-[#0874F2] text-white w-full h-12 mt-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
         >
           Withdraw Money
         </button>
@@ -201,11 +238,13 @@
     </section>
 
     <!-- Transfer Money Section -->
-    <section id="section-transferMoney" class="mt-10 mb-10 hidden">
-      <h2 class="text-lg font-semibold mb-4">Transfer Money</h2>
+    <section id="section-transferMoney" class="form mt-8 mb-10 hidden px-4">
+      <h2 class="text-xl font-semibold mb-4 ml-4 text-gray-800">
+        Transfer Money
+      </h2>
       <form
         id="form-transferMoney"
-        class="bg-white w-[402px] p-6 rounded-2xl"
+        class="bg-white w-96 max-w-sm mx-auto p-6 rounded-3xl shadow-xl border border-gray-100"
         action=""
       >
         <div class="mt-4">
@@ -214,7 +253,7 @@
             type="text"
             id="input-userAccNum"
             placeholder="Enter 11 digit number"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <div class="mt-4">
@@ -223,7 +262,7 @@
             type="text"
             id="input-transferAmount"
             placeholder="Add Amount to withdraw"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <div class="mt-4">
@@ -232,12 +271,12 @@
             type="text"
             id="input-pinNum-UAN"
             placeholder="Enter 4 digit pin Number"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <button
           id="btn-sendMoney"
-          class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
+          class="btn bg-gradient-to-r from-[#0874F2] to-[#1e40af] hover:from-[#1e40af] hover:to-[#0874F2] text-white w-full h-12 mt-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
         >
           Send Money
         </button>
@@ -245,11 +284,11 @@
     </section>
 
     <!-- Get Bonus Section -->
-    <section id="section-getBonus" class="mt-10 mb-10 hidden">
-      <h2 class="text-lg font-semibold mb-4">Get Bonus</h2>
+    <section id="section-getBonus" class="form mt-8 mb-10 hidden px-4">
+      <h2 class="text-xl font-semibold mb-4 ml-4 text-gray-800">Get Bonus</h2>
       <form
         id="form-getBonus"
-        class="bg-white w-[402px] p-6 rounded-2xl"
+        class="bg-white w-96 max-w-sm mx-auto p-6 rounded-3xl shadow-xl border border-gray-100"
         action=""
       >
         <div class="mt-4">
@@ -258,12 +297,12 @@
             type="text"
             id="input-coupon"
             placeholder="Enter your coupon"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <button
           id="btn-getBonus"
-          class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
+          class="btn bg-gradient-to-r from-[#0874F2] to-[#1e40af] hover:from-[#1e40af] hover:to-[#0874F2] text-white w-full h-12 mt-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
         >
           Get Bonus
         </button>
@@ -271,18 +310,18 @@
     </section>
 
     <!-- Pay Bill Section -->
-    <section id="section-payBill" class="mt-10 mb-10 hidden">
-      <h2 class="text-lg font-semibold mb-4">Pay Bill</h2>
+    <section id="section-payBill" class="form mt-8 mb-10 hidden px-4">
+      <h2 class="text-xl font-semibold mb-4 ml-4 text-gray-800">Pay Bill</h2>
       <form
         id="form-payBill"
-        class="bg-white w-[402px] p-6 rounded-2xl"
+        class="bg-white w-96 max-w-sm mx-auto p-6 rounded-3xl shadow-xl border border-gray-100"
         action=""
       >
         <div>
           <label for="">Select To Pay</label><br />
           <select
             id="select-toPay"
-            class="select bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="select bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           >
             <option>Select to Pay</option>
             <option>Electricity</option>
@@ -298,7 +337,7 @@
             type="text"
             id="input-billerAccNum"
             placeholder="Enter Account number"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <div class="mt-4">
@@ -307,7 +346,7 @@
             type="text"
             id="input-AmountToPay"
             placeholder="Add Amount to pay"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <div class="mt-4">
@@ -316,16 +355,120 @@
             type="text"
             id="input-pinNum-PB"
             placeholder="Enter 4 digit pin Number"
-            class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+            class="input bg-[#F4F5F7] w-full h-12 mt-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300"
           />
         </div>
         <button
           id="btn-payNow"
-          class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
+          class="btn bg-gradient-to-r from-[#0874F2] to-[#1e40af] hover:from-[#1e40af] hover:to-[#0874F2] text-white w-full h-12 mt-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
         >
           Pay Now
         </button>
       </form>
+    </section>
+
+    <!-- Transactions Section -->
+    <section id="section-transactions" class="form mt-8 mb-10 hidden px-4">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-semibold ml-4 text-gray-800">
+          Transaction History
+        </h2>
+        <h2
+          class="text-blue-500 hover:text-blue-600 cursor-pointer transition-colors duration-300"
+        >
+          View All
+        </h2>
+      </div>
+      <div id="form-transactionHistory" class="space-y-3"></div>
+    </section>
+
+    <!-- Transaction History -->
+    <section id="section-allTransactions" class="form mt-8 mb-10 px-4">
+      <h2 class="text-xl font-semibold mb-4 ml-4 text-gray-800">
+        Latest Transaction
+      </h2>
+      <div id="form-allTransactions" class="space-y-4 max-w-sm mx-auto">
+        <div
+          class="bg-white w-96 p-4 rounded-2xl flex justify-between items-center shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200"
+        >
+          <div class="flex gap-2">
+            <div
+              class="p-3 rounded-full bg-gradient-to-br from-blue-100 to-blue-200"
+            >
+              <img src="./Resources/assets/wallet1.png" class="w-6 h-6" />
+            </div>
+            <div>
+              <h2 class="font-semibold text-gray-800">Add Money</h2>
+              <h3 class="text-xs font-medium text-gray-500">12:00 PM</h3>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <div
+          class="bg-white w-full p-4 rounded-2xl flex justify-between items-center shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200"
+        >
+          <div class="flex gap-2">
+            <div
+              class="p-3 rounded-full bg-gradient-to-br from-red-100 to-red-200"
+            >
+              <img src="./Resources/assets/send1.png" class="w-6 h-6" />
+            </div>
+            <div>
+              <h2 class="font-semibold text-gray-800">Cash Out</h2>
+              <h3 class="text-xs font-medium text-gray-500">11:30 AM</h3>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <div
+          class="bg-white w-full p-4 rounded-2xl flex justify-between items-center shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200"
+        >
+          <div class="flex gap-2">
+            <div
+              class="p-3 rounded-full bg-gradient-to-br from-green-100 to-green-200"
+            >
+              <img src="./Resources/assets/money1.png" class="w-6 h-6" />
+            </div>
+            <div>
+              <h2 class="font-semibold text-gray-800">Transfer Money</h2>
+              <h3 class="text-xs font-medium text-gray-500">10:45 AM</h3>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <div
+          class="bg-white w-full p-4 rounded-2xl flex justify-between items-center shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200"
+        >
+          <div class="flex gap-2">
+            <div
+              class="p-3 rounded-full bg-gradient-to-br from-purple-100 to-purple-200"
+            >
+              <img src="./Resources/assets/purse1.png" class="w-6 h-6" />
+            </div>
+            <div>
+              <h2 class="font-semibold text-gray-800">Pay Bill</h2>
+              <h3 class="text-xs font-medium text-gray-500">09:15 AM</h3>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <div
+          class="bg-white w-full p-4 rounded-2xl flex justify-between items-center shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200"
+        >
+          <div class="flex gap-2">
+            <div
+              class="p-3 rounded-full bg-gradient-to-br from-yellow-100 to-yellow-200"
+            >
+              <img src="./Resources/assets/bonus1.png" class="w-6 h-6" />
+            </div>
+            <div>
+              <h2 class="font-semibold text-gray-800">Get Bonus</h2>
+              <h3 class="text-xs font-medium text-gray-500">08:30 AM</h3>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
     </section>
 
     <!-- JavaScript Connection -->

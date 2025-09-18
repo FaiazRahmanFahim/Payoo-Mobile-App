@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LogInPage</title>
+    <!-- Title & Logo -->
+    <title>Payoo - Login</title>
+    <link
+      rel="shortcut icon"
+      href="./Resources/payoo.png"
+      type="image/x-icon"
+    />
     <!-- tainwindCSS and daysiUI CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -11,37 +17,58 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Styles/style.css" />
   </head>
   <body
-    class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center"
+    class="bg-gradient-to-br from-[#F4F5F7] to-[#E8EBF0] min-h-screen flex flex-col justify-center items-center px-4 py-8"
   >
     <div
-      class="w-[316px] h-[136px] bg-[url(Resources/assets/bg.png)] bg-cover flex justify-center items-center"
+      class="w-full max-w-xs h-[136px] bg-[url(Resources/assets/bg.png)] bg-cover flex justify-center items-center rounded-2xl"
     >
-      <img src="Resources/assets/Group.png" alt="" />
+      <img
+        src="Resources/assets/Group.png"
+        alt="Payoo Logo"
+        class="w-16 h-16"
+      />
     </div>
-    <form class="bg-white w-[402px] p-8 rounded-2xl" action="">
+    <form
+      class="bg-white w-full max-w-sm mx-auto p-6 rounded-3xl shadow-xl border border-gray-100"
+      action=""
+    >
       <div>
-        <label for="">Mobile Number</label><br />
+        <label for="input-mobileNum" class="text-gray-700 font-bold text-base"
+          >Mobile Number</label
+        ><br />
         <input
           type="text"
           id="input-mobileNum"
-          placeholder="Enter your number"
-          class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          placeholder="Enter your mobile number"
+          class="input bg-[#F4F5F7] w-full h-12 mt-2 rounded-2xl border border-gray-200 transition-all duration-300 placeholder-gray-400"
         />
       </div>
-      <div class="mt-4">
-        <label for="">4 Digit Pin</label><br />
+      <div class="mt-6">
+        <label for="input-pinNum" class="text-gray-700 font-bold text-base"
+          >4 Digit Pin</label
+        ><br />
         <input
-          type="text"
+          type="password"
           id="input-pinNum"
-          placeholder="Enter 4 digit pin"
-          class="input bg-[#F4F5F7] w-[338px] h-[52px] mt-3 rounded-3xl"
+          placeholder="Enter your 4 digit pin"
+          maxlength="4"
+          class="input bg-[#F4F5F7] w-full h-12 mt-2 rounded-2xl border border-gray-200 transition-all duration-300 placeholder-gray-400"
         />
       </div>
       <button
         id="btn-LogIn"
-        class="btn bg-[#0874F2] text-white w-[338px] h-[53px] mt-4 rounded-3xl"
+        class="btn bg-gradient-to-r from-[#0874F2] to-[#1e40af] hover:from-[#1e40af] hover:to-[#0874F2] text-white w-full h-[50px] mt-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
       >
         Login
       </button>
